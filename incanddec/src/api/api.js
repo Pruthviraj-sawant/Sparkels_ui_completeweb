@@ -1,7 +1,7 @@
 // src/api.js or wherever you prefer to store your API logic
 
 // const API_BASE_URL = "http://localhost:5000/api"; // You can replace with environment variable if needed
-API_BASE_URL="https://sparkels-ui-completeweb.onrender.com/api";
+const API_BASE_URL="https://sparkels-ui-completeweb.onrender.com/api";
 export const sendContactForm = async (formData) => {
   try {
     const res = await fetch(`${API_BASE_URL}/contact`, {
