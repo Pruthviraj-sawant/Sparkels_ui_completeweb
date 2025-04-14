@@ -513,7 +513,7 @@
 // export default Component;
 import { useState } from "react";
 import {
-  BlackholeVortex, TornadoCanvs, AsteroidBelt, RainingEffect, Stars, RealisticMeteors,
+  BlackholeVortex, TornadoCanvas, AsteroidBelt, RainingEffect, Stars, RealisticMeteors,
   Mouselight, HackerBackground, Nebula, SouthPoleScene, PlasmaFlow, Flash,
   ThunderScene, Jelly, Card3D, DualSlideShow, FireEffectInput,
   NeoInput, LightningInput, PopperInput, VibrationInput, SlideShow,
@@ -703,7 +703,7 @@ export default App;`
 
 const componentsList = [
   { name: "BlackholeVortex", component: <BlackholeVortex /> },
-  { name: "Tornado", component: <TornadoCanvs /> },
+  { name: "Tornado", component: <TornadoCanvas /> },
   { name: "Stars", component: <Stars /> },
   { name: "Meteors", component: <RealisticMeteors /> },
   { name: "AsteroidBelt", component: <AsteroidBelt /> },
