@@ -842,7 +842,7 @@ const Component = () => {
             {/* Installation Info */}
             <h4 className="text-lg font-semibold mt-2">Installation</h4>
             <div className="relative w-full mt-1">
-              <pre className="bg-gray-800 p-2 border border-gray-600 rounded text-green-400 overflow-x-auto">npm install sparkels_ui</pre>
+              <pre className="bg-black p-2 border border-gray-600 rounded text-green-400 overflow-x-auto">npm install sparkels_ui</pre>
               <button
                 className="absolute top-1 right-1 text-sm text-white bg-gray-700 px-2 py-1 rounded hover:bg-gray-600"
                 onClick={() => copyToClipboard("npm install sparkels_ui")}
@@ -854,7 +854,7 @@ const Component = () => {
             {/* Usage Example */}
             <h4 className="text-lg font-semibold mt-4">Usage</h4>
             <div className="relative w-full mt-1">
-              <pre className="bg-gray-800 p-4 border border-gray-600 rounded text-green-400 whitespace-pre overflow-x-auto max-w-full">
+              <pre className="bg-black p-4 border border-gray-600 rounded text-green-400 whitespace-pre overflow-x-auto max-w-full">
                 {getComponentDocs(selectedName).usage}
               </pre>
               <button
