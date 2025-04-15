@@ -519,7 +519,7 @@ import {
   NeoInput, LightningInput, PopperInput, VibrationInput, SlideShow,
   SparksInput
 } from "sparkels_ui";
-import { Menu } from "lucide-react";
+import { Menu ,Copy } from "lucide-react";
 
 const slides = [
   { image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0", description: "Experience the beauty of nature." },
@@ -843,12 +843,14 @@ const Component = () => {
             <h4 className="text-lg font-semibold mt-2">Installation</h4>
             <div className="relative w-full mt-1">
               <pre className="bg-black p-2 border border-gray-600 rounded text-green-400 overflow-x-auto">npm install sparkels_ui</pre>
-              <button
-                className="absolute top-1 right-1 text-sm text-white bg-gray-700 px-2 py-1 rounded hover:bg-gray-600"
-                onClick={() => copyToClipboard("npm install sparkels_ui")}
-              >
-                Copy
-              </button>
+              <div
+  className="absolute top-1 right-1 p-1 rounded  text-white hover:bg-gray-900 cursor-pointer"
+  onClick={() => copyToClipboard("npm install sparkels_ui")}
+  title="Copy to clipboard"
+>
+  <Copy size={16} />
+</div>
+
             </div>
 
             {/* Usage Example */}
@@ -857,12 +859,13 @@ const Component = () => {
               <pre className="bg-black p-4 border border-gray-600 rounded text-green-400 whitespace-pre overflow-x-auto max-w-full">
                 {getComponentDocs(selectedName).usage}
               </pre>
-              <button
-                className="absolute top-2 right-2 text-sm text-white bg-gray-700 px-2 py-1 rounded hover:bg-gray-600"
-                onClick={() => copyToClipboard(getComponentDocs(selectedName).usage)}
-              >
-                Copy
-              </button>
+              <div
+  className="absolute top-1 right-1 p-1 rounded  text-white hover:bg-gray-900 cursor-pointer"
+  onClick={() => copyToClipboard(getComponentDocs(selectedName).usage)}
+  title="Copy to clipboard"
+>
+  <Copy size={16} />
+</div>
             </div>
           </div>
         )}
