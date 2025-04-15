@@ -77,6 +77,15 @@
 // export default Home;
 import { BlackholeVortex } from "sparkels_ui";
 import { Link } from "react-router-dom";
+import { 
+  SiReact, 
+  SiTailwindcss, 
+  SiFramer, 
+  SiThreedotjs, 
+  SiNpm, 
+  SiRollupdotjs, 
+  SiGithub 
+} from 'react-icons/si';
 
 const Home = () => {
   return (
@@ -105,12 +114,27 @@ const Home = () => {
             </button>
           </div>
           
-          <div className="mt-6 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-gray-400 text-xs sm:text-sm">
-            <span className="px-2 sm:px-3 py-1 bg-gray-900 rounded-lg">Next.js</span>
-            <span className="px-2 sm:px-3 py-1 bg-gray-900 rounded-lg">React</span>
-            <span className="px-2 sm:px-3 py-1 bg-gray-900 rounded-lg">TailwindCSS</span>
-            <span className="px-2 sm:px-3 py-1 bg-gray-900 rounded-lg">Framer Motion</span>
-          </div>
+  
+
+<div className="mt-6 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-gray-400 text-xs sm:text-sm">
+  <span className="flex items-center gap-2 px-2 sm:px-3 py-1 rounded-lg">
+    <SiReact className="text-blue-400" size={16} />
+    React
+  </span>
+  <span className="flex items-center gap-2 px-2 sm:px-3 py-1  rounded-lg">
+    <SiTailwindcss className="text-sky-400" size={16} />
+    TailwindCSS
+  </span>
+  <span className="flex items-center gap-2 px-2 sm:px-3 py-1  rounded-lg">
+    <SiFramer className="text-pink-400" size={16} />
+    Framer Motion
+  </span>
+  <span className="flex items-center gap-2 px-2 sm:px-3 py-1 rounded-lg">
+    <SiThreedotjs className="text-green-400" size={16} />
+    Three.js
+  </span>
+</div>
+
         </div>
       </div>
       
@@ -140,11 +164,22 @@ const Home = () => {
         
         {/* Copy & Paste Section */}
         <div className="mt-4 sm:mt-12 pb-16">
-          <div className="flex justify-center gap-2">
-            <span className="bg-gray-700 text-white px-2 sm:px-3 py-1 rounded-md shadow-md text-xs sm:text-sm">JS</span>
-            <span className="bg-gray-700 text-white px-2 sm:px-3 py-1 rounded-md shadow-md text-xs sm:text-sm">TAILWIND</span>
-            <span className="bg-gray-700 text-white px-2 sm:px-3 py-1 rounded-md shadow-md text-xs sm:text-sm">FRAMER MOTION</span>
-          </div>
+        {/* <div className="mt-6 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-gray-400 text-xs sm:text-sm"> */}
+ <div className="flex  justify-center space-x-6 sm:gap-4 text-gray-400 text-xs sm:text-sm">
+  <span className="flex items-center gap-2 px-2 sm:px-3 py-1 rounded-lg ">
+    <SiNpm className="text-red-500" size={16} />
+    NPM
+  </span>
+  <span className="flex items-center gap-2 px-2 sm:px-3 py-1  rounded-lg">
+    <SiRollupdotjs className="text-orange-400" size={16} />
+    Rollup
+  </span>
+  <span className="flex items-center gap-2 px-2 sm:px-3 py-1  rounded-lg">
+    <SiGithub className="text-white" size={16} />
+    GitHub + npm Registry
+  </span>
+  </div>
+{/* </div> */}
           
           <h3 className="text-xl sm:text-2xl font-semibold text-white mt-3 sm:mt-4">Simply copy & paste</h3>
           <p className="text-base sm:text-lg text-gray-400">Pick your favourite technologies, copy, enjoy!</p>
