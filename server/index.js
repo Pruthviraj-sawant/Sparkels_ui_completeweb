@@ -9,7 +9,7 @@ connectDB();
 const app = express();
 app.use(cors({
     // origin:"http://localhost:3000",
-    origin:["https://sparkelsuiweb.vercel.app","http://localhost:3000"],
+    origin:["www.sparkelsui.tech","http://localhost:3000"],
     // origin:"future-mentor-education-z7bm.vercel.app",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials:true,
