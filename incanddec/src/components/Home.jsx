@@ -77,6 +77,7 @@
 // export default Home;
 import { BlackholeVortex } from "sparkels_ui";
 import { Link } from "react-router-dom";
+import InstallationGuide from "./installatinguide";
 import { 
   SiReact, 
   SiTailwindcss, 

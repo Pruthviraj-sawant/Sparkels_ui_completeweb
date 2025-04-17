@@ -520,6 +520,7 @@ import {
   SparksInput
 } from "sparkels_ui";
 import { Menu ,Copy } from "lucide-react";
+import InstallationGuide from "./installatinguide";
 
 const slides = [
   { image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0", description: "Experience the beauty of nature." },
@@ -797,7 +798,7 @@ const Component = () => {
       <div className="flex-1 flex flex-col items-center  md:pl-0 md:pr-0 overflow-x-hidden">
         {/* Component Display Area */}
         <div className="w-full flex justify-center mb-8 ">
-          {selectedComponent ? selectedComponent : componentsList[0]?.component}
+          {selectedComponent ? selectedComponent : <InstallationGuide/>}
         </div>
         
         {/* Documentation Area */}
