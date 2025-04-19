@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sparkelsui.tech/sitemap.xml
+Sitemap: https://www.sparkelsui.tech/sitemap.xml
