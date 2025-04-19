@@ -11,4 +11,8 @@ npm start
 
 **Step 3:** Go to [http://localhost:3000](http://localhost:3000)
 
-Facing any issue: [Documentation](https://tailwindcss.com/docs/guides/create-react-app)
+
+## 📄 License
+Sparkels UI is open-source software licensed under the [MIT license](./LICENSE).
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
