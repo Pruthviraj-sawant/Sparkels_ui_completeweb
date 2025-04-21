@@ -722,7 +722,7 @@ const componentsList = [
       <Card3D
         image="https://c4.wallpaperflare.com/wallpaper/816/770/388/jordan-fly-wade-nike-wallpaper-preview.jpg"
         title="Air Jordan 4 RM"
-        subtitle="men's Shoes\nMRP : ₹ 12 795.00"
+        subtitle="men's Shoes MRP : ₹ 12 795.00"
         buttonText="BUY IT NOW"
         onButtonClick={() => alert("Button clicked!")}
       />
