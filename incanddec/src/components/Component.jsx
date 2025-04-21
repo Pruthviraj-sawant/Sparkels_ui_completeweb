@@ -716,7 +716,7 @@ const componentsList = [
   { name: "ThunderScene", component: <ThunderScene /> },
   { name: "Flash", component: <Flash /> },
   { name: "Jelly", component: <Jelly /> },
-  { name: "Mouselight", component: <Mouselight><h1 className="w-full">Welcome to Sparkels_ui🚀......................</h1></Mouselight> },
+  // { name: "Mouselight", component: <Mouselight><h1 className="w-full">Welcome to Sparkels_ui🚀......................</h1></Mouselight> },
   {
     name: "Card3D", component: (
       <Card3D
@@ -730,8 +730,8 @@ const componentsList = [
   },
   { name: "SparkSlide", component: <SlideShow slides={slides} /> },
   { name: "DualSlideShow", component: <DualSlideShow slides={slides} /> },
-  { name: "LightInput", component: <SparksInput placeholder="Welcome to Sparkels_ui🚀" /> },
-  { name: "Fireeffect", component: <FireEffectInput placeholder="Welcome to Sparkels_ui🚀" /> },
+  // { name: "LightInput", component: <SparksInput placeholder="Welcome to Sparkels_ui🚀" /> },
+  // { name: "Fireeffect", component: <FireEffectInput placeholder="Welcome to Sparkels_ui🚀" /> },
   { name: "Neoeffect", component: <NeoInput placeholder="Welcome to Sparkels_ui🚀" /> }
 ];
 
