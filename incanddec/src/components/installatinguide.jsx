@@ -808,7 +808,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
            <div className="ml-2">);</div>
            <div>{"}"}</div>
            <div className="mt-2"><span className="text-cyan-400">export</span> <span className="text-cyan-400">default</span> App;</div>
-           <button className="absolute top-3 sm:top-4 right-3 sm:right-4 text-gray-400" onClick={()=>{`//  using Sparkels UI
+           <button className="absolute top-3 sm:top-4 right-3 sm:right-4 text-gray-400" onClick={()=>handleCopy(`//  using Sparkels UI
  import { BlackholeVortex } from 'sparkels_ui';
  function App() {
  return (
@@ -817,7 +817,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
  </div>
  );
  }
- export default App;`}}>
+ export default App;`)}>
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
