@@ -665,6 +665,27 @@ function App() {
 
 export default App;`
   },
+  Jelly:{description:"A jelly-like animation effect.",
+    props:[
+    {name:"jellyCount",type:"number",required:false,default:"3",description:"Number of jelly elements"},
+    {name:"colors",type:"array",required:false,default:"['#ff00ff', '#00ffff', '#ffff00']",description:"Array of colors for the jelly elements"},
+    {name:"sizes",type:"array",required:false,default:"[3, 2, 1]",description:"Array of sizes for the jelly elements"}
+    ],
+   
+    usage:`import { Jelly} from "sparkels_ui";
+
+function App() {
+  return( 
+    
+  <Jelly 
+    jellyCount={3} 
+    colors={["#ff00ff", "#00ffff", "#ffff00","#ff00ff", "#00ffff", "#ffff00"]} 
+    sizes={[3, 2, 1]} 
+  />     );
+}
+
+export default App;`
+  },
   Fireeffect: {
     description: "An input field with a fire animation effect.",
     props: [
@@ -715,7 +736,12 @@ const componentsList = [
   { name: "HackerBackground", component: <HackerBackground /> },
   { name: "ThunderScene", component: <ThunderScene /> },
   { name: "Flash", component: <Flash /> },
-  { name: "Jelly", component: <Jelly /> },
+  { name: "Jelly", component: <Jelly 
+    jellyCount={4} 
+    colors={["#ff00ff", "#00ffff", "#ffff00","#ff00ff", "#00ffff", "#ffff00"]} 
+    sizes={[3, 2, 1]} 
+  />
+   },
   // { name: "Mouselight", component: <Mouselight><h1 className="w-full">Welcome to Sparkels_ui🚀......................</h1></Mouselight> },
   {
     name: "Card3D", component: (
