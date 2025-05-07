@@ -517,17 +517,35 @@ import {
   Mouselight, HackerBackground, Nebula, SouthPoleScene, PlasmaFlow, Flash,
   ThunderScene, Jelly, Card3D, DualSlideShow, FireEffectInput,
   NeoInput, LightningInput, PopperInput, VibrationInput, SlideShow,
-  SparksInput
+  SparksInput,ModernNavbar
 } from "sparkels_ui";
 import { Menu ,Copy } from "lucide-react";
 import InstallationGuide from "./installatinguide";
+import { FaHome, FaCode, FaShapes, FaReact, FaGithub, FaUser } from "react-icons/fa";
+// import { FaHome, FaInfoCircle, FaShapes} from "react-icons/fa"; // You need to correct MdContactMail's import
 
+import { MdContactMail } from "react-icons/md";
 const slides = [
   { image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0", description: "Experience the beauty of nature." },
   { image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b", description: "Explore cutting-edge technology." },
   { image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa", description: "Dive into the mysteries of the cosmos." },
   { image: "https://images.unsplash.com/photo-1470116945706-e6bf5d5a53ca", description: "Feel the serenity of the ocean waves." }
 ];
+
+const navItems = [
+  { icon: <FaHome className="group-hover:text-blue-400" />,  tooltip: "Home" },
+  { icon: <FaCode className="group-hover:text-green-400" />,  tooltip: "Code" },
+  { icon: <FaShapes className="group-hover:text-yellow-400" />,  tooltip: "Components" },
+  { icon: <FaReact className="group-hover:text-blue-500" />,  tooltip: "React" },
+  { icon: <FaGithub className="group-hover:text-purple-400" />,  tooltip: "GitHub" },
+  { icon: <FaUser className="group-hover:text-pink-400" />,  tooltip: "Profile" },
+];
+// const navItems = [ 
+//   { icon: <FaHome className="group-hover:text-blue-400" />, tooltip: "Home" },
+//   { icon: <FaInfoCircle className="group-hover:text-green-400" />,  tooltip: "About Us" },
+//   { icon: <FaShapes className="group-hover:text-yellow-400" />, tooltip: "Components" },
+//   { icon: <MdContactMail className="group-hover:text-pink-400" />,  tooltip: "Contact" },
+// ];
 
 // Component-specific documentation
 const componentDocs = {
@@ -704,7 +722,61 @@ function App() {
 }
 
 export default App;`
+  },
+  ModernNavbar: {
+    description: "A modern, customizable navbar with tooltip support and icon navigation.",
+    props: [
+      { name: "navLinks", type: "array", required: true, description: "Array of nav items with `icon`, `to`, and `tooltip`." },
+      { name: "bgColor", type: "string", required: false, default: "bg-white", description: "Background color class for the navbar." },
+      { name: "iconColor", type: "string", required: false, default: "text-black", description: "Tailwind class for inactive icons." },
+      { name: "activeColor", type: "string", required: false, default: "bg-blue-500 text-white", description: "Class for active nav item." },
+      { name: "height", type: "string", required: false, default: "h-14", description: "Height of the navbar." },
+      { name: "width", type: "string", required: false, default: "w-full", description: "Width of the navbar." },
+      { name: "tooltipColor", type: "string", required: false, default: "text-black", description: "Text color class for tooltip." },
+      { name: "position", type: "object", required: false, default: "{ top: '0', left: '0' }", description: "Position of the navbar." },
+
+    ],
+    usage: `
+
+import { FaHome, FaCode, FaShapes, FaReact, FaGithub, FaUser } from "react-icons/fa";
+import {ModernNavbar} from "sparkels_ui"
+
+import { BrowserRouter } from "react-router-dom";
+const App = () => {
+
+  const navItems = [
+    { icon: <FaHome className="group-hover:text-blue-400" />, to: "/", tooltip: "Home" },
+    { icon: <FaCode className="group-hover:text-green-400" />, to: "/code", tooltip: "Code" },
+    { icon: <FaShapes className="group-hover:text-yellow-400" />, to: "/components", tooltip: "Components" },
+    { icon: <FaReact className="group-hover:text-blue-500" />, to: "/react", tooltip: "React" },
+    { icon: <FaGithub className="group-hover:text-purple-400" />, to: "/github", tooltip: "GitHub" },
+    { icon: <FaUser className="group-hover:text-pink-400" />, to: "/profile", tooltip: "Profile" },
+  ];
+  
+  return (
+    <div className="min-h-screen text-white">
+      {/* Your main content goes here */}
+     
+      <BrowserRouter>
+      {/* Improved Modern Navbar */}
+      <ModernNavbar
+        navLinks={navItems}
+        bgColor="bg-zinc-800"
+        iconColor="text-gray-300 hover:text-white"
+        activeColor="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+        height="h-16"
+        width="w-[600px]"
+        tooltipColor="text-gray-900"
+        position={{ top: '3rem', left: '50%', transform: 'translateX(-50%)' }} 
+      />
+      </BrowserRouter>
+    </div>
+  );
+};
+
+export default App;`
   }
+  
   // Add more component-specific documentation as needed
 };
 
@@ -742,6 +814,22 @@ const componentsList = [
     sizes={[3, 2, 1]} 
   />
    },
+   {name:"ModernNavbar",component:<div className="relative z-10 h-16 w-[100px] overflow-hidden pointer-events-none">
+    <div className="relative  w-full overflow-hidden pointer-events-auto ">
+      <ModernNavbar
+        navLinks={navItems}
+        bgColor="bg-zinc-800"
+        iconColor="text-gray-300 hover:text-white"
+        activeColor="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+        height="h-16"
+        width="w-[600px]"
+        tooltipColor="text-gray-100"
+        position={{ top: '3rem', left: '50%', transform: 'translateX(-50%)' }} 
+      />
+    </div>
+  </div>
+  
+  },
   // { name: "Mouselight", component: <Mouselight><h1 className="w-full">Welcome to Sparkels_ui🚀......................</h1></Mouselight> },
   {
     name: "Card3D", component: (
@@ -758,7 +846,8 @@ const componentsList = [
   { name: "DualSlideShow", component: <DualSlideShow slides={slides} /> },
   // { name: "LightInput", component: <SparksInput placeholder="Welcome to Sparkels_ui🚀" /> },
   // { name: "Fireeffect", component: <FireEffectInput placeholder="Welcome to Sparkels_ui🚀" /> },
-  { name: "Neoeffect", component: <NeoInput placeholder="Welcome to Sparkels_ui🚀" /> }
+  { name: "Neoeffect", component: <NeoInput placeholder="Welcome to Sparkels_ui🚀" /> },
+  {}
 ];
 
 const Component = () => {
@@ -867,7 +956,7 @@ const Component = () => {
             )}
 
             {/* Installation Info */}
-            <h4 className="text-lg font-semibold mt-2">Installation</h4>
+            <h4 className="text-lg font-semibold mt-2 ">Installation</h4>
             <div className="relative w-full mt-1">
               <pre className="bg-black p-2 border border-gray-600 rounded text-green-400 overflow-x-auto">npm install sparkels_ui</pre>
               <div
@@ -883,7 +972,7 @@ const Component = () => {
             {/* Usage Example */}
             <h4 className="text-lg font-semibold mt-4">Usage</h4>
             <div className="relative w-full mt-1">
-              <pre className="bg-black p-4 border border-gray-600 rounded text-green-400 whitespace-pre overflow-x-auto max-w-full">
+              <pre className="bg-black p-4 border border-gray-600 rounded text-green-400 whitespace-pre overflow-x-auto max-w-full ">
                 {getComponentDocs(selectedName).usage}
               </pre>
               <div
