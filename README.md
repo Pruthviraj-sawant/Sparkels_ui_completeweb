@@ -1,6 +1,6 @@
 # ⚡ Sparkels UI Web
 
-Live demo: [sparkelsuiweb.vercel.app](https://sparkelsuiweb.vercel.app)
+Live demo: [sparkelsui.tech](https://sparkelsui.tech)
 
 ---
 
@@ -20,35 +20,6 @@ Sparkels UI Web is a React-based, Tailwind CSS‑powered UI library and accompan
 
 ---
 
-## 📂 Repository Structure
-
-
-Sparkels_ui_completeweb/
-├── backend/                 # Backend server (Node.js/Express or other)
-│   ├── controllers/         # Route handlers
-│   ├── models/              # Database models (if using MongoDB, etc.)
-│   ├── routes/              # API route definitions
-│   ├── config/              # Environment configs and DB connections
-│   ├── utils/               # Helper functions
-│   └── server.js            # Main server entry point
-│
-├── public/                  # Static assets (favicon, images, etc.)
-│
-├── src/                     # Frontend codebase
-│   ├── components/          # Reusable UI components (buttons, cards, etc.)
-│   ├── layouts/             # Page-level layout components
-│   ├── pages/               # Route-level pages (Home, About, Components, etc.)
-│   ├── styles/              # Tailwind config and global styles
-│   ├── App.jsx              # Root component
-│   └── main.jsx             # Frontend entry point
-│
-├── .env                     # Environment variables (not committed)
-├── tailwind.config.js       # Tailwind CSS configuration
-├── package.json             # Project dependencies and scripts
-├── LICENSE                  # MIT License
-└── README.md                # Project overview and documentation
-
-
 ##✨ Features
 
 npm i sparkels_ui
@@ -64,6 +35,7 @@ Sparkels UI offers a growing collection of modern, developer-friendly components
 
 📦 Easy integration — Import and use components in seconds with npm.
 
+---
 
 ##📦 Deployment
 🚀 Hosted on Vercel for automatic deployment from the master branch.
@@ -80,6 +52,7 @@ Integrated with Google Search Console for performance monitoring and indexing
 
 🧠 Smart asset caching and lazy-loading for images and animations ensure fast load times. 
 
+---
 
 ##🧩 Usage Examples
 Install (npm)
@@ -98,7 +71,7 @@ function App() {
   );
 }
 Find live examples and usage on the site.
-
+---
 ##📜 License
 Released under the MIT License. 
 
