@@ -53,25 +53,6 @@ Integrated with Google Search Console for performance monitoring and indexing
 🧠 Smart asset caching and lazy-loading for images and animations ensure fast load times. 
 
 ---
-
-##🧩 Usage Examples
-Install (npm)
-npm install sparkels_ui
-
-Basic Usage
-import { Button, Card, SparklesBackground } from 'sparkels_ui';
-function App() {
-  return (
-    <div>
-      <SparklesBackground particleColor="#fff" />
-      <Card title="Welcome">
-        <Button>Click Me</Button>
-      </Card>
-    </div>
-  );
-}
-Find live examples and usage on the site.
----
 ##📜 License
 Released under the MIT License. 
 
